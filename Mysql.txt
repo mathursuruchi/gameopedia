@@ -1,0 +1,96 @@
+CREATE TABLE Attribute_Theme(
+Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+Name VARCHAR(50) NOT NULL CHECK (Name IN ('Sci-Fi','Mystery','War','Horror','Crime'))
+);
+INSERT INTO Attribute_Theme(Name) VALUES ('Sci-Fi');
+INSERT INTO Attribute_Theme(Name) VALUES ('Mystery');
+INSERT INTO Attribute_Theme(Name) VALUES ('War');
+INSERT INTO Attribute_Theme(Name) VALUES ('Horror');
+INSERT INTO Attribute_Theme(Name) VALUES ('Crime');
+
+
+CREATE TABLE Attribute_Genre(
+Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+Name VARCHAR(50) NOT NULL CHECK (Name IN ('Racing','Shooting','Strategy','Adventure','Sports'))
+);
+INSERT INTO Attribute_Genre(Name) VALUES ('Racing');
+INSERT INTO Attribute_Genre(Name) VALUES ('Shooting');
+INSERT INTO Attribute_Genre(Name) VALUES ('Strategy');
+INSERT INTO Attribute_Genre(Name) VALUES ('Adventure');
+INSERT INTO Attribute_Genre(Name) VALUES ('Sports');
+
+
+CREATE TABLE Attribute_Violence(
+Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+Name VARCHAR(50) NOT NULL CHECK (Name IN ('High','Medium','Low','None'))
+);
+INSERT INTO Attribute_Violence(Name) VALUES ('High');
+INSERT INTO Attribute_Violence(Name) VALUES ('Medium');
+INSERT INTO Attribute_Violence(Name) VALUES ('Low');
+INSERT INTO Attribute_Violence(Name) VALUES ('None');
+
+
+CREATE TABLE Attribute_AgeGroup(
+Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+Name VARCHAR(50) NOT NULL CHECK (Name IN (3,13,18))
+);
+INSERT INTO Attribute_AgeGroup(Name) VALUES ('3');
+INSERT INTO Attribute_AgeGroup(Name) VALUES ('13');
+INSERT INTO Attribute_AgeGroup(Name) VALUES ('18');
+
+
+CREATE TABLE Games (
+Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+Game_Name VARCHAR(50) NOT NULL,
+Cover_URL VARCHAR(50) NOT NULL,
+Target_Age_Group INT(5) NOT NULL,
+Game_Theme INT(5) NOT NULL,	
+Game_Genre INT(5) NOT NULL,	
+Game_Violence INT(5) NOT NULL
+);
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Gran Turismo Sport","https://i.imgur.com/fpVLFsO.jpg","1","2","1","3");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Stellaris","https://i.imgur.com/1mlBaBs.jpg","2","3","3","4");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Phoenix Wright Ace Attorney","https://i.imgur.com/UCiQTbs.jpg","3","2","4","2");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("The Last of Us","https://i.imgur.com/b2CMhmT.jpg","3","1","4","3");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("The Crew 2","https://i.imgur.com/wm9BdG3.jpg","1","4","1","2");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("AO Tennis 2","https://i.imgur.com/7UaiZ6X.jpg","3","4","5","2");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("PUBG","https://i.imgur.com/oyNh4HG.jpg","1","2","2","4");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Project CARS 2","https://i.imgur.com/n7FZ8XZ.png","1","4","1","4");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Madden NFL 20","https://i.imgur.com/mYTrozi.jpg","2","1","5","4");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("F1 2019","https://i.imgur.com/Eyh23a1.png","1","5","1","3");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Planet Coaster","https://i.imgur.com/0medvFR.jpg","2","3","3","1");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Need for Speed: Heat","https://i.imgur.com/iPHkgQu.jpg","2","5","1","2");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Civilization VI","https://i.imgur.com/t9aKHLw.jpg","3","3","3","1");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Uncharted 4","https://i.imgur.com/apazESG.png","3","5","4","2");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("FIFA 20","https://i.imgur.com/ACrU3fJ.jpg","1","3","5","3");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Killzone Shadowfall","https://i.imgur.com/LY8jcfd.jpg","2","2","2","1");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Crash Team Racing: Nitro Fueled","https://i.imgur.com/Dywo5tX.jpg","3","4","1","4");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Gears of War 4","https://i.imgur.com/G9gp25N.jpg","1","1","2","1");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Forza Horizon 4","https://i.imgur.com/QVq6SAT.jpg","2","4","1","3");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Farenheit","https://i.imgur.com/hOv0Fkd.jpg","1","4","4","4");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("NBA 2K20","https://i.imgur.com/XyEaW81.jpg","2","1","5","1");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Rocket League","https://i.imgur.com/ZZXbPq9.jpg","3","4","5","2");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("XCOM 2","https://i.imgur.com/v1wq052.jpg","1","2","3","3");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Rise of the Tomb Raider","https://i.imgur.com/Fm3OQw2.jpg","2","1","4","4");
+INSERT INTO Games(Game_Name,Cover_URL,Target_Age_Group,Game_Theme,Game_Genre,Game_Violence) VALUES ("Horizon Zero Dawn","https://i.imgur.com/ZnTnDcG.png","3","1","4","1");
+
+
+CREATE TABLE User (
+Id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+User_Name VARCHAR(30) NOT NULL,
+Password VARCHAR(30) NOT NULL,
+Age INT(6) NOT NULL,
+Pref_Game_Theme VARCHAR(30),
+Pref_Game_Genre VARCHAR(30),
+Pref_Game_Violence VARCHAR(30)
+);
+
+INTERT INTO User (User_Name,Password,Age,Pref_Game_Theme,Pref_Game_Genre,Pref_Game_Violence) VALUES ("Adrian","Password1","15","3,1","2,5","1,2,4");
+INTERT INTO User (User_Name,Password,Age,Pref_Game_Theme,Pref_Game_Genre,Pref_Game_Violence) VALUES ("Vladimir","Password1","43","4,5","4","1,2");
+INTERT INTO User (User_Name,Password,Age,Pref_Game_Theme,Pref_Game_Genre,Pref_Game_Violence) VALUES ("Naveen","Password1","5","","5,3","3,4");
+INTERT INTO User (User_Name,Password,Age,Pref_Game_Theme,Pref_Game_Genre,Pref_Game_Violence) VALUES ("Xi","Password1","17","2,5","","");
+INTERT INTO User (User_Name,Password,Age,Pref_Game_Theme,Pref_Game_Genre,Pref_Game_Violence) VALUES ("Mitsuki","Password1","32","5,1","4,1","2,3");
+INTERT INTO User (User_Name,Password,Age,Pref_Game_Theme,Pref_Game_Genre,Pref_Game_Violence) VALUES ("Olivier","Password1","26","4","2,3","");
+INTERT INTO User (User_Name,Password,Age,Pref_Game_Theme,Pref_Game_Genre,Pref_Game_Violence) VALUES ("Roberto","Password1","12","","","4,3,2");
+INTERT INTO User (User_Name,Password,Age,Pref_Game_Theme,Pref_Game_Genre,Pref_Game_Violence) VALUES ("Sharzad","Password1","37","","2,5","3,4");
+
